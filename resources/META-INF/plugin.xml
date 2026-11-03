@@ -1,0 +1,19 @@
+<idea-plugin>
+  <id>io.vicander.idea</id>
+  <name>Vicander</name>
+  <version>0.1.0</version>
+  <vendor>vicander</vendor>
+  <description>Navigation for the Vicander DDD framework: Ctrl+click on a call to an operation
+    goes to the defop that defines it, and on `command.field` goes to the `field :field` that declares it.</description>
+
+  <idea-version since-build="262"/>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.elixir_lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <gotoDeclarationHandler implementation="io.vicander.idea.DefopGotoDeclarationHandler"/>
+    <gotoDeclarationHandler implementation="io.vicander.idea.RepositoryGotoDeclarationHandler"/>
+    <gotoDeclarationHandler implementation="io.vicander.idea.FieldGotoDeclarationHandler"/>
+  </extensions>
+</idea-plugin>
