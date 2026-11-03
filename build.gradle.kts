@@ -25,18 +25,6 @@ dependencies {
     }
 }
 
-// Keep the existing layout (src/, test/, resources/) instead of moving to src/main/java.
-sourceSets {
-    main {
-        java.setSrcDirs(listOf("src"))
-        resources.setSrcDirs(listOf("resources"))
-    }
-    test {
-        java.setSrcDirs(listOf("test"))
-        resources.setSrcDirs(emptyList<String>())
-    }
-}
-
 tasks.withType<JavaCompile> {
     options.release = 21
     options.compilerArgs.addAll(listOf("-proc:none", "-nowarn"))

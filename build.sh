@@ -17,9 +17,9 @@ rm -rf build
 mkdir -p build/classes build/vicander/lib
 
 "$JAVA_HOME_JBR/bin/javac" -proc:none -nowarn --release 21 \
-  -cp "$CLASSPATH" -d build/classes $(find src -name '*.java')
+  -cp "$CLASSPATH" -d build/classes $(find src/main/java -name '*.java')
 
-cp -r resources/META-INF build/classes/
+cp -r src/main/resources/META-INF build/classes/
 (cd build/classes && zip -qr ../vicander/lib/vicander.jar .)
 
 echo "built build/vicander"

@@ -18,6 +18,6 @@ rm -rf build/test-classes
 mkdir -p build/test-classes
 
 "$JBR/bin/javac" -proc:none -nowarn --release 21 \
-  -cp "$CLASSPATH:build/classes" -d build/test-classes $(find test -name '*.java')
+  -cp "$CLASSPATH:build/classes" -d build/test-classes $(find src/test/java -name '*.java')
 
 "$JBR/bin/java" -cp "build/test-classes:build/classes:$CLASSPATH" io.vicander.idea.HandlerLogicTest

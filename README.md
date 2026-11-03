@@ -42,9 +42,9 @@ into the IDE's plugins directory), and `./test.sh` builds and runs the logic tes
 ## Layout
 
 ```
-src/        plugin sources (io.vicander.idea)
-resources/  META-INF/plugin.xml
-test/       HandlerLogicTest — dependency-free tests for the pure logic
+src/main/java/       plugin sources (io.vicander.idea)
+src/main/resources/  META-INF/plugin.xml
+src/test/java/       HandlerLogicTest — dependency-free tests for the pure logic
 ```
 
 The PSI-driven navigation itself needs a running IDE with the Elixir plugin and is not covered
